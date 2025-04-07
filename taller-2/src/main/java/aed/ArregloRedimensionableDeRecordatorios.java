@@ -30,7 +30,6 @@ public class ArregloRedimensionableDeRecordatorios {
   }
 
   public Recordatorio obtener(int i) {
-    if (i < 0 || i >= size) throw new IndexOutOfBoundsException();
     return arreglo[i];
   }
 
@@ -42,12 +41,11 @@ public class ArregloRedimensionableDeRecordatorios {
   }
 
   public void modificarPosicion(int indice, Recordatorio valor) {
-    if (indice < 0 || indice >= size) throw new IndexOutOfBoundsException();
     arreglo[indice] = valor;
   }
 
   public ArregloRedimensionableDeRecordatorios(ArregloRedimensionableDeRecordatorios vector) {
-    this.arreglo = new Recordatorio[vector.arreglo.length];
+    this.arreglo = new Recordatorio[vector.size];
     this.size = vector.size;
     for (int i = 0; i < size; i++) {
       this.arreglo[i] = vector.arreglo[i];

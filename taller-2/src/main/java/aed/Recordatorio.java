@@ -16,7 +16,6 @@ public class Recordatorio {
   }
 
   public Fecha fecha() {
-    // Devolvemos una copia para evitar aliasing.
     return new Fecha(fecha);
   }
 
